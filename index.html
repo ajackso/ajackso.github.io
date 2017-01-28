@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Andrea Jackson</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The personal website of an aspiring software engineer">
+    <meta name="description" content="The personal website of a college student">
     <meta name="author" content="Andrea Jackson">
-    
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <title>Andrea Jackson</title>
 
@@ -27,30 +28,162 @@
 
   <body>
 
-    <div class="site-wrapper">
+    <div class="container-fluid">
 
-      <div class="site-wrapper-inner">
+      <div class="row-fluid">
 
-        <div class="cover-container">
+        <div class="col-lg-3">
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Andrea Jackson</h1>
-            <hr>
-            <p class="lead">Hello! I'm a junior at Wellesley College studying Computer Science and Chinese. I'm passionate about data science and creating programs that improve people's lives. 
-            </p>
-            <br>
-            <p class="lead"><small>Check out <a href="https://twitter.com/W_DAVlab"><i class="fa fa-at"></i>W_DAVlab</a> for updates on my summer research project!<small></p> 
+          <!-- Sidebar -->
+          <!-- The sidebar is based on the example sidebar in the links below -->
+          <!-- https://startbootstrap.com/template-overviews/simple-sidebar/ -->
+          <!-- https://superdevresources.com/fixed-width-sidebar/ -->
+
+          <nav class="navbar navbar-inverse navbar-fixed-top sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+              <li class="sidebar-brand">
+                <span class="image">
+                  <img src="images/headshot.jpg" class="roundedImage" height="75" width="65">
+                </span>
+                <h1>Andrea Jackson</h1>
+                <p>CS student @ Wellesley College</p>
+              </li>
+              <li role="presentation"><a href="#intro"><i class="fa fa-user-circle fa-fw"></i> Introduction</a></li>
+              <li role="presentation"><a href="#projects"><i class="fa fa-lightbulb-o fa-fw"></i> Projects</a></li>
+              <li role="presentation"><a href="#organizations"><i class="fa fa-users fa-fw"></i> Organizations</a></li>
+              <!-- <li role="presentation"><a href="#news"><i class="fa fa-newspaper-o fa-fw"></i> News</a></li> -->
+              <!-- <li role="presentation"><a href="#blog"><i class="fa fa-i-cursor fa-fw"></i> Blog</a></li> -->
+              <li role="presentation"><a href="#contact"><i class="fa fa-envelope-o fa-fw"></i> Contact</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="col-lg-9">
+
+          <div id="headerToggle">
+            <a href="#header" id="header"><i class="fa fa-code fa-2x"></i></a>
           </div>
 
-          <div class="mastfoot">
-            <div class="inner">
-            <p>
-               <a href="https://github.com/ajackso"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-               <a href="mailto:ajackso2@wellesley.edu?subject=Howdy!"><i class="fa fa-at fa-3x"></i></a>
-               <a href="https://www.linkedin.com/in/ajackso2"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
-               <a href="https://twitter.com/awn_dray_uh"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-            </p>
+          <div class="content-wrapper">
+
+            <div class="content-wrapper-inner">
+
+              <div class="cover-container">
+
+                <!-- <a href="#info" id="black"><i class="fa fa-info-circle" aria-hidden="true"></i></a> -->
+
+                <!--Introduction -->
+                <div class="inner">
+                  <h1><b>Andrea Jackson</b></h1>
+                  <hr style="height: 1px; color=#000; background:#000;">
+                  <p>
+                    Hello! I'm a <b><a href="http://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159" id="red">Latinx</a></b> junior at Wellesley College studying Computer Science. I'm passionate about data science and creating programs that improve people's lives.
+                  </p>
+
+                  <p>
+                    This semester I am taking CS 315: Data and Text Mining on the Web. Come learn more about the projects I'll be working on in this class <b><a href="cs.wellesley.edu/~ajackso2/cs315" id="red">here</a></b>!
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Projects -->
+              <h2 id="projects">Projects</h2>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="card">
+                    <h3 class="card-title">Ruhlman Web application<h3>
+                    <img src="images/Ruhlman.png" alt="image of the Ruhlman web applciation" class="img-thumbnail" height="400" width="450">
+                    <div class="card-block">
+                      <p class="card-text">
+                        <code>I created a web application that allows user to explore conference abstracts from 20 years of Ruhlman Conferences. Users can generate graphs of and search a database of the abstracts. This project was the result of a program I participated in Summer 2016 - Wellesley Science Center Summer Research Program.</code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="card">
+                    <h3 class="card-title">Schedule Maker<h3>
+                    <img src="images/ScheduleMaker.png" alt="image of a schedule maker program" class="img-thumbnail" height="300" width="400">
+                    <div class="card-block">
+                      <p class="card-text">
+                        <code>My two teammates and I built a program that generates up to 15 schedules for users. Users input two courses they must enroll in and 2-3 optional courses. I created the GUI for the project and helped implement the action listeners of the GUI.</code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="card">
+                    <h3 class="card-title">Gmail Analysis<h3>
+                    <img src="images/GmailAnalysis.png" alt="a bar graph of the number of emails received every day of the month" class="img-thumbnail" height="300" width="400">
+                    <div class="card-block">
+                      <p class="card-text">
+                        <code>For a data, analytics and visualizations course I analyzed the frequency I receive emails over one academic year.</code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Organizations -->
+              <h2 id="organizations">Organizations<h2>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="card">
+                    <h3 class="card-title">Mezcla<h3>
+                    <img src="images/MezclaLogo.png" alt="image of a Monarch butterly with the name Mezcla replacing the abdomen and thorax of the butterfly" class="img-thumbnail" height="300" width="300">
+                    <div class="card-block">
+                      <p class="card-text">
+                        <code>Mezcla is a Latinx cultural organization at Wellesley College that focuses on the academic, social, <a href="https://www.facebook.com/pg/Mezcla-Wellesley-College-198400840342/photos/?tab=album&album_id=10158120223615343" id="red">political</a> and well-being of Wellesley students of Latinx descent. I've served on the e-board of Mezcla as the CAN representative from 2015-2016 and have participated in the annual Latinx Culture Show.</code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="card">
+                    <h3 class="card-title">Wellesley Computer Science Club<h3>
+                    <img src="images/CSClubLogo.png" alt="a blue and purble diamond with the acronym WCCS inside the diamond" class="img-thumbnail" height="300" width="300">
+                    <div class="card-block">
+                      <p class="card-text">
+                        <code>The Computer Science Club is a student org that enriches the CS community's experience in computer science beyond the CS curriculum. The CS Club hosts well-attended hackathons, networking events and technical workshops for students. For 4 semesters I have served as the Workshop and Co-Workshop chair for the CS Club. Topics of workshops organized in past semesters include: databases, Framer.js, git and HTML/CSS.</code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- News -->
+              <!-- <h2 id="news">News<h2> -->
+
+              <!-- Blog -->
+              <!-- <h2 id="blog">Blog<h2> -->
+
+              <!-- Contact -->
+              <h2 id="Contact">Contact Me<h2>
+
+              <p><b>ajackso2 at wellesley dot edu</b><p>
+
+              <div class="mastfoot">
+                <div class="inner" id="contact">
+                <p>
+                   <a href="https://github.com/ajackso"><i class="fa fa-github fa-2x" aria-hidden="true" id="black"></i></a>
+                   <a href="mailto:ajackso2@wellesley.edu?subject=Howdy!" id="black"><i class="fa fa-at fa-2x"></i></a>
+                   <a href="https://www.linkedin.com/in/ajackso2"><i class="fa fa-linkedin fa-2x" aria-hidden="true" id="black"></i></a>
+                   <a href="https://twitter.com/awn_dray_uh" id="black"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                </p>
+                </div>
+              </div>
+
             </div>
+
           </div>
 
         </div>
@@ -65,7 +198,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script>
+      $("#headerToggle").click(function(e) {
+       e.preventDefault();
+      $(".sidebar-wrapper").toggleClass("toggled");
+      });
+    </script>
+
   </body>
 </html>

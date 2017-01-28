@@ -1,6 +1,7 @@
 /*
- * Globals
- */
+  Author: Andrea Jackson;
+*/
+
 
 /* Links */
 a,
@@ -9,46 +10,35 @@ a:hover {
   color: #fff;
 }
 
-/* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+ul.nav a:hover {
+  background-color: gray;
 }
 
-
-/*
- * Base structure
- */
+/* Main Content */
 
 html,
 body {
   height: 100%;
-  background-color: #f55;
-}
-body {
-  color: #fff;
+  /*background-color: rgb(1,73,145);*/
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  font-family: Raleway;
 }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+p {
+  font-size: 20px;
 }
-.site-wrapper-inner {
-  display: table-cell;
+
+.content-wrapper {
+  margin-left: 270px;
+  height: 100%;
+}
+
+.content-wrapper-inner {
   vertical-align: top;
 }
+
 .cover-container {
+  margin-top: 13%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -58,117 +48,154 @@ body {
   padding: 30px;
 }
 
-
-/*
- * Header
- */
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+/* Edit Bootstrap */
+.col-lg-9 {
+  float: right;
+  width: 100%;
 }
 
-.masthead-nav > li {
+/*
+ * Side Navigation Bar
+ */
+.sidebar-wrapper {
+  width: 270px;
+  height: 100%;
+  background-color: black;
+  /*margin-right: -270px;*/
+  float: left;
+}
+
+.sidebar-nav {
+  top: 20px;
+  width: 270px;
+
+}
+
+.sidebar-nav li {
+  position: relative;
+  text-align: left;
+  line-height: 35px;
+  font-size: 17px;
   display: inline-block;
+  width: 100%;
 }
-.masthead-nav > li + li {
+
+.sidebar-brand {
+  position: relative;
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+  min-height: 48px;
+  height: 75px;
+  font-size: 20px;
+  line-height: 44px;
+}
+
+.sidebar-brand h1 {
+  position: relative;
+  margin-top: 0;
   margin-left: 20px;
-}
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
-}
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
-}
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
+  margin-right: 20px;
+  text-align: right;
   color: #fff;
-  border-bottom-color: #fff;
+  font-size: 1em;
+  line-height: 1em;
 }
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
+.sidebar-brand p {
+  position: relative;
+  margin-top: 0;
+  margin-right: 20px;
+  text-align: right;
+  display: block;
+  font-size: 0.8em;
+  line-height: 1.25em;
+  color: #fff;
 }
 
+.sidebar-brand .image {
+  position: relative;
+  float: left;
+  left: 20px;
+  border: 1px solid black;
+
+}
 
 /*
- * Cover
+ * Image
  */
 
-.cover {
-  padding: 0 20px;
+.roundedImage {
+  border-radius: 50%;
 }
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
 
 /*
  * Footer
  */
 
 .mastfoot {
-  color: #999;  /*IE8 proofing */
-  color: rgba(255,255,255,.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#headerToggle {
+    display: none;
 }
 
 
+
 /*
- * Affix and center
+ * Re-format for Mobile Devices
  */
 
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
+@media (max-width: 768px) {
+  /*hide sidebar*/
+  .navbar {
+    display: none;
   }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
-}
 
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
+  img {
+  max-width: 100%;
+  }
+
+  .content-wrapper {
+    margin-left: 0;
+  }
+
+  .sidebar-wrapper .toggled {
+    padding-left: 270px;
+  }
+
+  #headerToggle {
+    font-style: normal;
+    font-weight: normal;
+    content: '\f01f';
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    top: 0.5em;
+    left: 0.5em;
+    position: fixed;
+    height: 2.25em;
+    width: 3.25em;
+    border-radius: 0.35em;
+    background: rgba(128, 136, 144, 0.5);
   }
 }
 
 /*
-* Font
+* Style
 */
 
-.lead,
-.cover-heading {
-  font-family: Raleway;
-  font-weight: 200;
-  font-style: normal;
+#red {
+  color:red;
+}
+
+#black {
+  color:black;
+}
+
+#info {
+  position: fixed;
+  top: 0px;
+  right: 0px;
 }
