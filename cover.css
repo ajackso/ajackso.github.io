@@ -1,5 +1,5 @@
 /*
-  Author: Andrea Jackson;
+  Author: Andrea Jackson
 */
 
 
@@ -165,6 +165,11 @@ p {
     padding-left: 270px;
   }
 
+  /*
+  * Mobile phone sidebar is currenly not functioning.
+  * Design of toggable sidebar and desktop sidebar is based on
+  * https://html5up.net/prologue
+  */
   #headerToggle {
     font-style: normal;
     font-weight: normal;
@@ -195,7 +200,7 @@ p {
 }
 
 #info {
-  position: fixed;
-  top: 0px;
-  right: 0px;
+  position: absolute;
+  top: 0.5em;
+  right: 0;
 }
